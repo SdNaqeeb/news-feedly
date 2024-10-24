@@ -1,0 +1,246 @@
+/* Container with flex and vh/vw units */
+.register-container, .login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #a139fc, #4a00e0);
+  background-size: cover;
+}
+
+/* Glassmorphism card design */
+.glass-card {
+  width: 25vw;
+  padding: 5vh;
+  border-radius: 2vh;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4vh 5vw rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1vh);
+  -webkit-backdrop-filter: blur(1vh);
+  border: 0.2vh solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Headings */
+.glass-card h2 {
+  font-size: 4vh;
+  margin-bottom: 2vh;
+  color: #080808;
+}
+
+/* Form inputs */
+.glass-card form input {
+  width: 90%;
+  padding: 1.5vh;
+  margin: 2vh 0;
+  border-radius: 2vh;
+  border: none;
+  background: rgba(255, 254, 254, 0.889);
+  color: #080000;
+  font-size: 2.5vh;
+}
+
+/* Form button */
+.glass-card form button {
+  width: 90%;
+  padding: 1.5vh;
+  background: #2d0b5e;
+  border: none;
+  border-radius: 2vh;
+  color: #ffffff;
+  font-size: 2.5vh;
+  margin-top: 3vh;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.glass-card form button:hover {
+  background: #010101;
+}
+
+/* Text and hover effect for link */
+.glass-card p {
+  color: #424040;
+  margin-top: 3vh;
+  cursor: pointer;
+}
+
+.hoverable {
+  color: #d3cdcd;
+  text-decoration: underline;
+}
+
+.hoverable:hover {
+  color: #0e0101;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-2vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media queries for mobile devices */
+@media only screen and (max-width: 768px) {
+  .glass-card {
+    width: 80vw; /* Wider card for smaller screens */
+    padding: 5vw; /* Use vw for padding */
+  }
+
+  .glass-card h2 {
+    font-size: 4vw;
+  }
+
+  .glass-card form input,
+  .glass-card form button {
+    font-size: 4vw;
+  }
+
+  .glass-card form button {
+    margin-top: 5vw;
+  }
+
+  .glass-card p {
+    margin-top: 5vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .glass-card {
+    width: 90vw;
+    padding: 6vw;
+  }
+
+  .glass-card h2 {
+    font-size: 5vw;
+  }
+
+  .glass-card form input,
+  .glass-card form button {
+    font-size: 5vw;
+  }
+
+  .glass-card form button {
+    margin-top: 6vw;
+  }
+
+  .glass-card p {
+    margin-top: 6vw;
+  }
+}
+
+
+/* News card design */
+.news-card {
+  width: 30vw;
+  height: 40vh;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.news-card h3 {
+  margin: 0;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.news-card p {
+  margin: 0;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.news-card a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+
+/* News list container */
+.news-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Allow cards to wrap on smaller screens */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  width: 100vw; /* Fill the viewport width */
+}
+
+.news-list .news-card {
+  margin: 10px; /* Spacing between cards */
+}
+
+
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 50vw;
+  margin: 10px auto;
+}
+
+.search-bar input {
+  width: 100%;
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-bar.focused input {
+  border-color: #007bff;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0067cc;
+}
+
+
+/* Source filter */
+.source-filter {
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  margin: 10px 0; /* Add some margin for spacing */
+}
+
+.source-filter h3 {
+  margin-right: 10px; /* Add some space between heading and checkboxes */
+  margin-bottom: 5px; /* Add some space between heading and checkboxes */
+}
+
+.source-filter label {
+  margin-right: 10px; /* Add some space between checkboxes and labels */
+  display: block; /* Make labels appear on separate lines */
+  margin-bottom: 5px; /* Add some space between checkboxes and labels */
+  cursor: pointer; /* Make the whole label clickable */
+}
